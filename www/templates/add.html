@@ -1,0 +1,18 @@
+<ion-view view-title="Add Note">
+    <ion-content ng-controller="addCtrl">
+
+        <div class="list card">
+            <div class="item item-input">
+                <input type="text"  style="width: 100%" maxlength="50" ng-model="newNote.title">
+            </div>
+            <div class="item">
+                <textarea  style="width: 100%;" rows="15"  ng-model="newNote.description"></textarea>
+            </div>
+
+        </div>
+        <div class="padding">
+            <button ng-click="addNote()" class="button button-block button-positive">Add Note</button>
+        </div>
+
+    </ion-content>
+</ion-view>

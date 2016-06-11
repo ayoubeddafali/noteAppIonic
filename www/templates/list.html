@@ -1,0 +1,45 @@
+<ion-view  ng-controller="listCtrl">
+    <ion-nav-title>
+        <span id="title">My Notes</span>
+    </ion-nav-title>
+    <ion-nav-buttons side="right">
+        <a id="addNote" href="#/add" class="button  button-positive icon-left  ion-compose"><b> Add Note</b></a>
+
+    </ion-nav-buttons>
+
+<ion-content >
+    <!--<div class="padding">-->
+    <!--</div>-->
+    <ion-list show-reorder="reorderState" >
+        <ion-item  href="#/edit/{{note.id}}" class="item-icon-right item-thumbnail-left item-remove-animate" ng-repeat="note in notes">
+            <img src="img/note.png" width="20" height="20" alt="">
+            <span id="info">
+            <h2>{{note.title}}</h2>
+            <p>{{note.description}}</p>
+                <i class="icon ion-arrow-right-b"></i>
+            </span>
+            <ion-option-button class="button-assertive icon-left ion-trash-a"
+                               ng-click="deleteNote(note.id)">
+                Delete
+            </ion-option-button>
+            <ion-reorder-button class="ion-navicon"
+                                on-reorder="reorderNote(note, $fromIndex, $toIndex)">
+            </ion-reorder-button>
+
+
+        </ion-item>
+
+    </ion-list>
+
+
+</ion-content>
+    <ion-footer-bar align-title="left" class="bar-positive">
+
+        <div class="buttons" ng-click="deleteAll()">
+            <button id="deleteBtn" class="button button-assertive icon-left ion-android-delete"><b> Delete All</b></button>
+        </div>
+        <div class="buttons pull-right" ng-click="reorderFlag()">
+            <button  class="button button-balanced icon-left ion-shuffle"><b id="status">Reorder</b></button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

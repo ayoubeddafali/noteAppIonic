@@ -1,0 +1,25 @@
+/* Empty. Add your own CSS if you like */
+
+
+#info{
+    padding: 20px;
+}
+.bar-footer{
+    position: absolute;
+    bottom: 0px
+}
+
+/*#deleteBtn{*/
+    /*margin-left: 30px;*/
+/*}*/
+
+#addNote{
+    border: 1px solid white;
+}
+
+#title{
+    font-family: gargi;
+    font-stretch: ultra-condensed;
+
+    margin-left: 15px;
+}
